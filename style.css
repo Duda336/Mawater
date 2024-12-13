@@ -1,0 +1,254 @@
+<!DOCTYPE html >
+<html lang="en" dir="ltr" >
+
+<head >
+<meta charset="UTF-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title > Siraj | The Comprehensive Car Platform</title >
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
+<script src="https://cdn.jsdelivr.net/npm/chart.js" > </script >
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f9fafb;
+}
+
+.custom-gradient {
+    background: linear-gradient(135deg, #0066cc 0%, #00b4d8 100%);
+}
+
+.car-card {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+    .car-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+</style >
+</head >
+
+<body class="bg-gray-50" >
+<!-- Navigation -->
+<header class="fixed w-full z-50 bg-white shadow-md" >
+<nav class="container mx-auto px-4 py-3 flex justify-between items-center" >
+<div class="flex items-center" >
+<a href="/" class="flex items-center" >
+<img src="/api/placeholder/50/50" alt="Logo" class="w-12 h-12 ml-4 rounded-full" >
+<h1 class="text-2xl font-bold text-blue-600" > Mawater 974</h1 >
+</a >
+</div >
+<ul class="flex space-x-6" >
+<li > <a href="#cars" class="text-gray-700 hover:text-blue-600 transition" > Home</a > </li >
+<li > <a href="#cars" class="text-gray-700 hover:text-blue-600 transition" > Cars</a > </li >
+<li > <a href="#services" class="text-gray-700 hover:text-blue-600 transition" > Services</a > </li >
+<li > <a href="#contact" class="text-gray-700 hover:text-blue-600 transition" > Contact Us</a > </li >
+</ul >
+<div class="flex items-center space-x-4" >
+<button id="loginBtn" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition" >
+Login
+</button >
+<button id="registerBtn" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-full hover:bg-blue-50 transition" >
+Create Account
+</button >
+<!-- Settings Button -->
+<button id="settingsBtn" class="text-gray-700 hover:text-blue-600 transition" >
+<i class="fas fa-cogs text-2xl" > </i >
+</button >
+</div >
+</nav >
+</header >
+<!-- Hero Section -->
+<section class="custom-gradient text-white pt-24 pb-16 px-4" >
+<div class="container mx-auto text-center" >
+<h2 class="text-5xl font-bold mb-6" > Welcome to Mawater 974 <p > "Ride in style"</p > </h2 >
+<p class="text-xl mb-10 max-w-2xl mx-auto" > An integrated platform for all your car needs - Buying, Selling, Renting, Maintenance, and more</p >
+<div class="flex justify-center space-x-4" >
+<button class="bg-white text-blue-600 px-8 py-3 rounded-full hover:bg-gray-100 transition" >
+Explore Cars
+</button >
+<button class="border border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-600 transition" >
+Sell Your Car
+</button >
+</div >
+</div >
+</section >
+<!-- Featured Cars Section -->
+<section id="cars" class="container mx-auto py-16 px-4" >
+<div class="text-center mb-12" >
+<h3 class="text-3xl font-bold text-gray-800" > Featured Cars</h3 >
+<p class="text-gray-600 mt-4" > Latest offers and available cars</p >
+</div >
+<div class="grid md:grid-cols-3 gap-8" >
+<!-- Car Card Template (would be dynamically populated) -->
+<div class="bg-white rounded-lg shadow-lg overflow-hidden car-card" >
+<img src="/api/placeholder/400/250" alt="Car" class="w-full h-56 object-cover" >
+<div class="p-6" >
+<h4 class="text-xl font-bold mb-2" > Toyota Land Cruiser 2024</h4 >
+<div class="flex justify-between items-center" >
+<span class="text-blue-600 font-bold" > 285, 000 QAR</span >
+<button class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition" >
+Car Details
+</button >
+
+</div >
+</div >
+</div >
+<div class="bg-white rounded-lg shadow-lg overflow-hidden car-card" >
+<img src="/api/placeholder/400/250" alt="Car" class="w-full h-56 object-cover" >
+<div class="p-6" >
+<h4 class="text-xl font-bold mb-2" > Toyota Camry 2024</h4 >
+<div class="flex justify-between items-center" >
+<span class="text-blue-600 font-bold" > 85, 000 QAR</span >
+<button class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition" >
+Car Details
+</button >
+
+</div >
+</div >
+</div >
+<div class="bg-white rounded-lg shadow-lg overflow-hidden car-card" >
+<img src="/api/placeholder/400/250" alt="Car" class="w-full h-56 object-cover" >
+<div class="p-6" >
+<h4 class="text-xl font-bold mb-2" > Mercedes C63s 2022</h4 >
+<div class="flex justify-between items-center" >
+<span class="text-blue-600 font-bold" > 90, 000 QAR</span >
+<button class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition" >
+Car Details
+</button >
+
+</div >
+</div >
+<!-- Repeat 2 more times -->
+</div >
+</section >
+<!-- Services Section -->
+<section id="services" class="bg-gray-100 py-16" >
+<div class="container mx-auto px-4" >
+<div class="text-center mb-12" >
+<h3 class="text-3xl font-bold text-gray-800" > Our Comprehensive Services</h3 >
+<p class="text-gray-600 mt-4" > Complete solutions for all your car needs</p >
+</div >
+<div class="grid md:grid-cols-3 gap-8" >
+<div class="bg-white p-8 rounded-lg shadow-md text-center" >
+<i class="fas fa-car text-blue-600 text-5xl mb-6" > </i >
+<h4 class="text-xl font-bold mb-4" > Buy and Sell Cars</h4 >
+<p class="text-gray-600 mb-6" > An integrated platform with advanced AI technologies</p >
+<button class="bg-blue-50 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-100 transition" >
+Learn More
+</button >
+</div >
+<div class="bg-white p-8 rounded-lg shadow-md text-center" >
+<i class="fas fa-tools text-blue-600 text-5xl mb-6" > </i >
+<h4 class="text-xl font-bold mb-4" > Maintenance and Repairs</h4 >
+<p class="text-gray-600 mb-6" > Comprehensive maintenance services with quick appointment booking</p >
+<button class="bg-blue-50 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-100 transition" >
+Book Appointment
+</button >
+</div >
+<div class="bg-white p-8 rounded-lg shadow-md text-center" >
+<i class="fas fa-exchange-alt text-blue-600 text-5xl mb-6" > </i >
+<h4 class="text-xl font-bold mb-4" > Renting and Financing</h4 >
+<p class="text-gray-600 mb-6" > Flexible financing options and a wide range of rental cars</p >
+<button class="bg-blue-50 text-blue-600 px-6 py-2 rounded-full hover:bg-blue-100 transition" >
+Explore Options
+</button >
+</div >
+</div >
+</div >
+</section >
+<!-- Market Insights Section -->
+<section class="container mx-auto py-16 px-4" >
+<div class="text-center mb-12" >
+<h3 class="text-3xl font-bold text-gray-800" > Market Insights</h3 >
+<p class="text-gray-600 mt-4" > Car market analysis and statistics</p >
+</div >
+<div class="bg-white rounded-lg shadow-lg p-8" >
+<canvas id="marketChart" height="300" > </canvas >
+</div >
+</section >
+<!-- Contact Section -->
+<section id="contact" class="bg-gray-800 text-white py-16" >
+<div class="container mx-auto px-4 text-center" >
+<h3 class="text-3xl font-bold mb-6" > Contact Us</h3 >
+<p class="text-gray-400 mb-10 max-w-2xl mx-auto" > We are here to help. Reach out to us via the form below or through our contact information</p >
+<form class="max-w-lg mx-auto" >
+<div class="grid md:grid-cols-2 gap-6 mb-6" >
+<input type="text" placeholder="Name" class="w-full p-3 rounded-lg bg-gray-700 text-white" >
+<input type="email" placeholder="Email" class="w-full p-3 rounded-lg bg-gray-700 text-white" >
+</div >
+<textarea placeholder="Your Message" class="w-full p-3 rounded-lg bg-gray-700 text-white h-40 mb-6" > </textarea >
+<button class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition" >
+Send Message
+</button >
+</form >
+</div >
+</section >
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12" >
+<div class="container mx-auto px-4" >
+<div class="grid md:grid-cols-4 gap-8" >
+<div >
+<h5 class="text-xl font-bold mb-4" > Mawater 974</h5 >
+<p class="text-gray-400" > "Ride In Style"</p >
+</div >
+<div >
+<h5 class="text-xl font-bold mb-4" > Quick Links</h5 >
+<ul >
+<li > <a href="#" class="text-gray-400 hover:text-white" > Home</a > </li >
+<li > <a href="#" class="text-gray-400 hover:text-white" > Cars</a > </li >
+<li > <a href="#" class="text-gray-400 hover:text-white" > Services</a > </li >
+</ul >
+</div >
+<div >
+<h5 class="text-xl font-bold mb-4" > Contact</h5 >
+<p class="text-gray-400" > +974 50000974</p >
+<p class="text-gray-400" > info@Mawater974.com</p >
+</div >
+<div >
+<h5 class="text-xl font-bold mb-4" > Follow Us</h5 >
+<div class="flex space-x-4" >
+<a href="#" class="text-gray-400 hover:text-white" > <i class="fab fa-twitter" > </i > </a >
+<a href="#" class="text-gray-400 hover:text-white" > <i class="fab fa-instagram" > </i > </a >
+<a href="#" class="text-gray-400 hover:text-white" > <i class="fab fa-snapchat" > </i > </a >
+</div >
+</div >
+</div >
+</div >
+</footer >
+
+<script >
+// Market Insights Chart
+var ctx = document.getElementById('marketChart').getContext('2d');
+var marketChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Car Sales',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+</script >
+</body >
+
+</html >
